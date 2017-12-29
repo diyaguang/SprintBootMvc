@@ -48,7 +48,7 @@ public class MyMvcConfig extends WebMvcConfigurerAdapter {
     //※※※※※※ 特别重要的，对静态资源进行过滤的方法，需要这个类继承 WebMvcConfigurerAdapter，并重写 addResourceHandlers方法。
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry){
-        registry.addResourceHandler("/assets/**").addResourceLocations("classpath:/asssets/");
+        registry.addResourceHandler("/assets/**").addResourceLocations("classpath:/assets/");
     }
 
     //设置页面转向默认的跳转对应规则，也就是 url 与 view 的对应关系，就是对应 RequestMapping 上配置的对应。

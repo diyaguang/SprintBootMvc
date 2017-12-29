@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class ConverterController {
 
     //指定返回的没体力型为自定义的媒体类型 application/x-wisely
-    @RequestMapping(value = "/convert",produces = {"application/x-wisely"})
+    @RequestMapping(value = "/convert",produces = "application/x-wisely")
     public @ResponseBody DemoObj convert(@RequestBody DemoObj demoObj){
         return demoObj;
     }

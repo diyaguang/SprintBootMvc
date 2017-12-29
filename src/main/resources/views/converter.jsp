@@ -8,5 +8,18 @@
 <body>
 <div id="resp"></div>
 <input type="button" onclick="req();" value="请求"/>
-
+<script type="text/javascript" src="/assets/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript">
+    function req() {
+        $.ajax({
+            url:"convert",
+            data:"1-diyaguang",
+            type:"POST",
+            contentType:"application/x-wisely",
+            success:function (data) {
+                $("#resp").html(data);
+            }
+        });
+    }
+</script>
 </body>
